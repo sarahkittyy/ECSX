@@ -110,6 +110,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3952f3653a4544ff9cfaa7f9dd45fd89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_world.html#a3952f3653a4544ff9cfaa7f9dd45fd89">configureSystem</a> (std::shared_ptr&lt; <a class="el" href="class_e_c_s_x_1_1_system.html">System</a> &gt; &amp;sys)</td></tr>
 <tr class="memdesc:a3952f3653a4544ff9cfaa7f9dd45fd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived world classes may have extra application globals they store. This can be inherited and used to pass pointers of these globals down to all system objects.  <a href="#a3952f3653a4544ff9cfaa7f9dd45fd89">More...</a><br /></td></tr>
 <tr class="separator:a3952f3653a4544ff9cfaa7f9dd45fd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec46b4051a3230bbcbb91c9a565bfe1f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_world.html#aec46b4051a3230bbcbb91c9a565bfe1f">onTick</a> ()</td></tr>
+<tr class="memdesc:aec46b4051a3230bbcbb91c9a565bfe1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every <a class="el" href="class_e_c_s_x_1_1_world.html#ae424c35198f77adcf3ffda57bebf4292" title="Updates all systems.">tick()</a>. Can be inherited.  <a href="#aec46b4051a3230bbcbb91c9a565bfe1f">More...</a><br /></td></tr>
+<tr class="separator:aec46b4051a3230bbcbb91c9a565bfe1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main entity-storing world. </p>
@@ -265,6 +268,33 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Entity* A pointer to that entity. </dd></dl>
+
+</div>
+</div>
+<a id="aec46b4051a3230bbcbb91c9a565bfe1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec46b4051a3230bbcbb91c9a565bfe1f">&#9670;&nbsp;</a></span>onTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ECSX::World::onTick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called every <a class="el" href="class_e_c_s_x_1_1_world.html#ae424c35198f77adcf3ffda57bebf4292" title="Updates all systems.">tick()</a>. Can be inherited. </p>
 
 </div>
 </div>
