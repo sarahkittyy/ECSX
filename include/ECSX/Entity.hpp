@@ -11,6 +11,11 @@ namespace ECSX
 /// For setting world as a friend class
 class World;
 
+/**
+ * @brief The main entity object, stored in ECSX worlds.
+ * Stores it's own components, with methods for component retrieval.
+ * 
+ */
 class Entity
 {
 public:
