@@ -96,6 +96,13 @@ protected:
 	 */
 	virtual void configureSystem(std::shared_ptr<System>& sys);
 
+	/**
+	 * @brief Called every tick().
+	 * Can be inherited.
+	 * 
+	 */
+	virtual void onTick();
+
 private:
 	/// A map of entity IDs to the entity object itself.
 	std::unordered_map<uuid_t, Entity> mEntities;

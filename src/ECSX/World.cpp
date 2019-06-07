@@ -50,10 +50,15 @@ void World::configureSystem(std::shared_ptr<System>& sys)
 
 void World::tick()
 {
+	onTick();
 	for (auto& sys : mSystems)
 	{
 		sys->tick();
 	}
+}
+
+void World::onTick()
+{
 }
 
 }
