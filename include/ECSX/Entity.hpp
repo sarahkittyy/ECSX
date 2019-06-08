@@ -97,7 +97,7 @@ public:
 		{
 			if (componentIsType<Comp>(&i))
 			{
-				return reinterpret_cast<Comp*>(i.get());
+				return static_cast<Comp*>(i.get());
 			}
 		}
 		return nullptr;
