@@ -33,20 +33,19 @@ public:
 	 * 
 	 * @tparam Comp The component to use.
 	 * @param args The arguments to pass to the component constructor. 
-	 * @returns bool False if the component already exists in the entity.
+	 * @returns Comp* The created component.
 	 */
 	template <class Comp, class... Args>
-	bool use(Args&&... args)
+	Comp* use(Args&&... args)
 	{
 		//Check to make sure the component isn't already in use.
-		if (has<Comp>())
+		if (!has<Comp>())
 		{
-			return false;
+			//Push the component.
+			mComponents.push_back(std::make_unique<Comp>(args...));
 		}
-
-		//Emplace the component.
-		mComponents.push_back(std::make_unique<Comp>(args...));
-		return true;
+		//Return the component.
+		return get<Comp>();
 	}
 
 	/**
