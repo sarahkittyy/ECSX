@@ -64,7 +64,7 @@ protected:
 	 * in the template parameter.
 	 * 
 	 * @tparam Components The components to check.
-	 * @param action The action to take on all valid matchin entities.
+	 * @param action The action to take on all valid matching entities.
 	 */
 	template <typename... Components>
 	void each(std::function<void(Entity*)> action)
@@ -80,7 +80,7 @@ protected:
 			}
 		}
 	}
-	
+
 	/**
 	 * @brief Get the first entity with component type `Component`
 	 * 
@@ -89,15 +89,15 @@ protected:
 	 * 
 	 * @remarks Useful if the component is uniquely bound to only one entity in your world. faster than each<Component>()[0].
 	 */
-	template<typename Component>
+	template <typename Component>
 	Entity* first()
 	{
 		//For all entities..
-		for(auto& [id, e] : *mEntities)
+		for (auto& [id, e] : *mEntities)
 		{
 			//If it has component `Component`....,
 			//return it.
-			if(e.has<Component>())
+			if (e.has<Component>())
 			{
 				return &e;
 			}
