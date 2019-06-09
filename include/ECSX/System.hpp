@@ -80,6 +80,30 @@ protected:
 			}
 		}
 	}
+	
+	/**
+	 * @brief Get the first entity with component type `Component`
+	 * 
+	 * @tparam Component The type of component
+	 * @return Entity* The first entity found, or nullptr if none were found.
+	 * 
+	 * @remarks Useful if the component is uniquely bound to only one entity in your world. faster than each<Component>()[0].
+	 */
+	template<typename Component>
+	Entity* first()
+	{
+		//For all entities..
+		for(auto& [id, e] : *mEntities)
+		{
+			//If it has component `Component`....,
+			//return it.
+			if(e.has<Component>())
+			{
+				return &e;
+			}
+		}
+		return nullptr;
+	}
 
 	/**
 	 * @brief Return a vector of all entities.
