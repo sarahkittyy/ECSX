@@ -100,6 +100,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a884826413818dea5edb36b1b4e38e6af"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_system.html#a884826413818dea5edb36b1b4e38e6af">each</a> (std::function&lt; void(<a class="el" href="class_e_c_s_x_1_1_entity.html">Entity</a> *)&gt; action)</td></tr>
 <tr class="memdesc:a884826413818dea5edb36b1b4e38e6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs an action on every entity with all components specified in the template parameter.  <a href="#a884826413818dea5edb36b1b4e38e6af">More...</a><br /></td></tr>
 <tr class="separator:a884826413818dea5edb36b1b4e38e6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98e96671a9e77e48a63757a22cc9430"><td class="memTemplParams" colspan="2">template&lt;typename Component &gt; </td></tr>
+<tr class="memitem:af98e96671a9e77e48a63757a22cc9430"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_e_c_s_x_1_1_entity.html">Entity</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_system.html#af98e96671a9e77e48a63757a22cc9430">first</a> ()</td></tr>
+<tr class="memdesc:af98e96671a9e77e48a63757a22cc9430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first entity with component type <code><a class="el" href="class_e_c_s_x_1_1_component.html" title="Base component class for storing in entities.">Component</a></code>  <a href="#af98e96671a9e77e48a63757a22cc9430">More...</a><br /></td></tr>
+<tr class="separator:af98e96671a9e77e48a63757a22cc9430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e878a3eaa261c358e9903446775dead"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_e_c_s_x_1_1_entity.html">Entity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_system.html#a5e878a3eaa261c358e9903446775dead">all</a> ()</td></tr>
 <tr class="memdesc:a5e878a3eaa261c358e9903446775dead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector of all entities.  <a href="#a5e878a3eaa261c358e9903446775dead">More...</a><br /></td></tr>
 <tr class="separator:a5e878a3eaa261c358e9903446775dead"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,10 +281,47 @@ template&lt;typename... Components&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">action</td><td>The action to take on all valid matchin entities. </td></tr>
+    <tr><td class="paramname">action</td><td>The action to take on all valid matching entities. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af98e96671a9e77e48a63757a22cc9430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98e96671a9e77e48a63757a22cc9430">&#9670;&nbsp;</a></span>first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Component &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_e_c_s_x_1_1_entity.html">Entity</a>* ECSX::System::first </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the first entity with component type <code><a class="el" href="class_e_c_s_x_1_1_component.html" title="Base component class for storing in entities.">Component</a></code> </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="class_e_c_s_x_1_1_component.html" title="Base component class for storing in entities.">Component</a></td><td>The type of component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Entity* The first entity found, or nullptr if none were found.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Useful if the component is uniquely bound to only one entity in your world. faster than <a class="el" href="class_e_c_s_x_1_1_system.html#a50fbccbf01465cb304fce30bf4ffa913" title="Returns a vector of entities, each with all components specified in the template parameter.">each&lt;Component&gt;()</a>[0]. </dd></dl>
 
 </div>
 </div>

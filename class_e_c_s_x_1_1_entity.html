@@ -85,10 +85,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac67df81480c62a0cccc2f12eb3333a95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_entity.html#ac67df81480c62a0cccc2f12eb3333a95">Entity</a> (uuid_t <a class="el" href="class_e_c_s_x_1_1_entity.html#a566cf0fa008505b2cdb09f81b61cdc12">id</a>)</td></tr>
 <tr class="memdesc:ac67df81480c62a0cccc2f12eb3333a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the entity.  <a href="#ac67df81480c62a0cccc2f12eb3333a95">More...</a><br /></td></tr>
 <tr class="separator:ac67df81480c62a0cccc2f12eb3333a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d25021f9844674e8e68ab82458bf47"><td class="memTemplParams" colspan="2">template&lt;class Comp , class... Args&gt; </td></tr>
-<tr class="memitem:a86d25021f9844674e8e68ab82458bf47"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_entity.html#a86d25021f9844674e8e68ab82458bf47">use</a> (Args &amp;&amp;... args)</td></tr>
-<tr class="memdesc:a86d25021f9844674e8e68ab82458bf47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a component on the entity.  <a href="#a86d25021f9844674e8e68ab82458bf47">More...</a><br /></td></tr>
-<tr class="separator:a86d25021f9844674e8e68ab82458bf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e30b755f0e4b54d83327d35076238e7"><td class="memTemplParams" colspan="2">template&lt;class Comp , class... Args&gt; </td></tr>
+<tr class="memitem:a3e30b755f0e4b54d83327d35076238e7"><td class="memTemplItemLeft" align="right" valign="top">Comp *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_entity.html#a3e30b755f0e4b54d83327d35076238e7">use</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a3e30b755f0e4b54d83327d35076238e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a component on the entity.  <a href="#a3e30b755f0e4b54d83327d35076238e7">More...</a><br /></td></tr>
+<tr class="separator:a3e30b755f0e4b54d83327d35076238e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a485b6061316f63ee4f13fa9b857c25df"><td class="memTemplParams" colspan="2">template&lt;class CompA , class CompB , class... Comps&gt; </td></tr>
 <tr class="memitem:a485b6061316f63ee4f13fa9b857c25df"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_e_c_s_x_1_1_entity.html#a485b6061316f63ee4f13fa9b857c25df">has</a> ()</td></tr>
 <tr class="memdesc:a485b6061316f63ee4f13fa9b857c25df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity has all of the given components.  <a href="#a485b6061316f63ee4f13fa9b857c25df">More...</a><br /></td></tr>
@@ -274,8 +274,8 @@ false Otherwise. </dd></dl>
 
 </div>
 </div>
-<a id="a86d25021f9844674e8e68ab82458bf47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86d25021f9844674e8e68ab82458bf47">&#9670;&nbsp;</a></span>use()</h2>
+<a id="a3e30b755f0e4b54d83327d35076238e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e30b755f0e4b54d83327d35076238e7">&#9670;&nbsp;</a></span>use()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +286,7 @@ template&lt;class Comp , class... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ECSX::Entity::use </td>
+          <td class="memname">Comp* ECSX::Entity::use </td>
           <td>(</td>
           <td class="paramtype">Args &amp;&amp;...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
@@ -313,7 +313,7 @@ template&lt;class Comp , class... Args&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool False if the component already exists in the entity. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Comp* The created component. </dd></dl>
 
 </div>
 </div>
